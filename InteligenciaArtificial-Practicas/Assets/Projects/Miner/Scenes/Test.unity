@@ -600,6 +600,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 905316908150889889, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2147242647}
+    - target: {fileID: 905316908150889889, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: mainEntity
+      value: 
+      objectReference: {fileID: 917706048888184990}
     - target: {fileID: 917706050827540577, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
       propertyPath: m_Name
       value: Miner
@@ -648,17 +656,112 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 917706050827540582, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
-      propertyPath: ore
+    - target: {fileID: 2491285151470156487, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: mainEntity
+      value: 
+      objectReference: {fileID: 917706048888184990}
+    - target: {fileID: 5459036902347011978, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: target
       value: 
       objectReference: {fileID: 547921967}
-    - target: {fileID: 917706050827540582, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
-      propertyPath: storage
+    - target: {fileID: 5545331198228338216, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: mainEntity
+      value: 
+      objectReference: {fileID: 917706048888184990}
+    - target: {fileID: 6747734748496674658, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: onMinedOre.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747734748496674658, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: onMinedOre.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747734748496674658, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: onMinedOre.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747734748496674658, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: onMinedOre.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099683614515881456, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 547921967}
+    - target: {fileID: 7099683614515881456, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: mainEntity
+      value: 
+      objectReference: {fileID: 917706048888184990}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: fsm
+      value: 
+      objectReference: {fileID: 917706048888184985}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: mine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: deposit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: fsm.states.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: fsm.states.Array.data[0].onMainBehaviourEnded.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: fsm.states.Array.data[0].onMainBehaviourEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: fsm.states.Array.data[0].onMainBehaviourEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 917706048888184986}
+    - target: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: fsm.states.Array.data[0].onMainBehaviourEnded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8457215998549002049, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: target
       value: 
       objectReference: {fileID: 2147242647}
-    - target: {fileID: 917706050827540582, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
-      propertyPath: minerSpeed
+    - target: {fileID: 8457215998549002049, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: deposit
+      value: 
+      objectReference: {fileID: 2147242647}
+    - target: {fileID: 8457215998549002049, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+      propertyPath: mineUses
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+--- !u!114 &917706048888184985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6076444103229821800, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+  m_PrefabInstance: {fileID: 917706048888184984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79877ce813bf6540a365f723496bcb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &917706048888184986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7204421181637797332, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+  m_PrefabInstance: {fileID: 917706048888184984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cab418a28be794d989f14c816b2cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &917706048888184990 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 917706050827540581, guid: fdaa90dc8202de34680a02a574d6dbf9, type: 3}
+  m_PrefabInstance: {fileID: 917706048888184984}
+  m_PrefabAsset: {fileID: 0}
