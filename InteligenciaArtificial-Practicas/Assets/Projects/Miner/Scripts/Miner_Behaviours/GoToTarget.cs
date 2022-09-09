@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class GoToTarget : BehaviourFSM
 {
@@ -21,19 +24,51 @@ public class GoToTarget : BehaviourFSM
     [SerializeField] private bool isMine = false;
     #endregion
 
+    #region PRIVATE_FIELDS
+    private float timeBetweenAgents = 2f;
+    private float timer = 0f;
+    #endregion
+
     #region OVERRIDES
+
     public override void UpdateBehaviour()
     {
-        Vector3 dir = (target.transform.position - mainEntity.position).normalized;
-
-        if (Vector3.Distance(target.transform.position, mainEntity.position) > 1.0f)
+        if(timer < timeBetweenAgents)
         {
-            mainEntity.rotation = Quaternion.Slerp(mainEntity.rotation, Quaternion.LookRotation(dir.normalized), 10f * Time.deltaTime);
-            mainEntity.position = Vector3.MoveTowards(mainEntity.position, target.transform.position, 10.0f * Time.deltaTime);
+            timer += Time.deltaTime;
         }
         else
         {
-            if(!isMine)
+            StartCoroutine(GoTargetInTime(1f));
+
+            timer = 0;
+        }
+    }
+
+    public void DecreaseMineUses()
+    {
+        mineUses--;
+    }
+    #endregion
+
+    #region PRIVATE_CORUTINES
+    private IEnumerator GoTargetInTime(float delayPerAgent)
+    {
+        for (int i = 0; i < agentsInvolved.Count; i++)
+        {
+            Vector3 dir = (target.transform.position - agentsInvolved[i].transform.position).normalized;
+
+            while (Vector3.Distance(target.transform.position, agentsInvolved[i].transform.position) > 1.0f)
+            {
+                agentsInvolved[i].transform.rotation = Quaternion.Slerp(agentsInvolved[i].transform.rotation, Quaternion.LookRotation(dir.normalized), 10f * Time.deltaTime);
+                agentsInvolved[i].transform.position = Vector3.MoveTowards(agentsInvolved[i].transform.position, target.transform.position, 10.0f * Time.deltaTime);
+
+                yield return null;
+            }
+            
+            yield return new WaitForSeconds(delayPerAgent);
+
+            if (!isMine)
             {
                 if (mineUses <= 0)
                 {
@@ -47,13 +82,9 @@ public class GoToTarget : BehaviourFSM
             else
             {
                 endOnState?.Invoke(endStates[(int)END_STATES_MINE.GO_TODEPOSIT]);
+
             }
         }
-    }
-
-    public void DecreaseMineUses()
-    {
-        mineUses--;
     }
     #endregion
 }

@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227ebc14c5820fc4dbf22db1f096d316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntity: {fileID: 0}
+  mainEntity: {fileID: 917706050827540581}
   miningTime: 5
   currentMiningTime: 0
   onMinedOre:
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba392197a5618942ac92a0659a37407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntity: {fileID: 0}
+  mainEntity: {fileID: 917706050827540581}
   target: {fileID: 0}
   mineUses: 0
   isMine: 1
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba392197a5618942ac92a0659a37407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntity: {fileID: 0}
+  mainEntity: {fileID: 917706050827540581}
   target: {fileID: 0}
   mineUses: 5
   isMine: 0
@@ -477,4 +477,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753938963dd88c4aad22c89565616ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntity: {fileID: 0}
+  mainEntity: {fileID: 917706050827540581}

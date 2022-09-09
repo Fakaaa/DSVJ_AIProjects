@@ -2,19 +2,19 @@ using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Video;
 
 public abstract class BehaviourFSM : MonoBehaviour
 {
-    #region EXPOSED_FIELDS
-    [SerializeField] protected Transform mainEntity = null;
-    #endregion
-
     #region PROTECTED_FIELDS
+    protected List<Agent> agentsInvolved = new List<Agent>();
+
     protected bool hasEnded = false;
     protected List<Action> normalEndActions;
 
     protected List<string> endStates;
     protected Action<string> endOnState;
+    protected Action onAbruptStopBehaviou;
     #endregion
 
     #region PROPERTIES
@@ -34,6 +34,11 @@ public abstract class BehaviourFSM : MonoBehaviour
         endOnState = onNextState;
     }
 
+    public virtual void SetOnAbruptStop(Action onAbruptStop)
+    {
+        onAbruptStopBehaviou = onAbruptStop;
+    }
+
     public virtual void SetActionsOnEndOfBehaviour(params Action [] atEndBehaviour)
     {
         if(normalEndActions == null)
@@ -42,6 +47,11 @@ public abstract class BehaviourFSM : MonoBehaviour
         }
 
         normalEndActions.AddRange(atEndBehaviour);
+    }
+
+    public virtual void SetBehaviourTargets(List<Agent> agentsInvolved)
+    {
+        this.agentsInvolved = agentsInvolved;
     }
     #endregion
 }

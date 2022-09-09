@@ -29,13 +29,14 @@ public class StateFSM
     #endregion
 
     #region PUBLIC_METHODS
-    public void Init(Action<string> onGoNextState)
+    public void Init(Action<string> onGoNextState, List<Agent> agentsInvolved)
     {
         string[] nextStates = nextState.Split("|");
         endStates.AddRange(nextStates);
 
         if (mainBehaviour != null)
         {
+            mainBehaviour.SetBehaviourTargets(agentsInvolved);
             mainBehaviour.SetPosibbleEndStates(endStates);
             mainBehaviour.SetOnEndMainBehaviour(onGoNextState);
         }
